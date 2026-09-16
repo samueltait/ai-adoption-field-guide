@@ -67,9 +67,13 @@ The guide is deliberately sparing with diagrams. Before adding one:
 - A diagram must never assert a rule the text does not assert, and must never
   drop a condition the text states. Where the two disagree, the text governs
   and the diagram is wrong.
-- Keep labels short. GitHub scales a Mermaid diagram to fit the column width,
-  so a diagram with wide labels becomes illegible on a phone rather than
-  scrolling.
+- Keep the whole diagram narrow. GitHub scales a Mermaid diagram down to fit
+  the column rather than letting it scroll sideways, so at phone width the
+  text inside the shapes is the first thing to become unreadable. Total
+  rendered width is what governs this, and it is driven by the number of
+  parallel branches as much as by the length of any one label: a wide fan of
+  short labels can read as poorly as a narrow chain of long ones. Check any
+  new or changed diagram at roughly 400px before accepting it.
 - Any diagram must be fully redundant with the surrounding text, because a
   reader using a screen reader receives nothing from the rendered image.
 - If a diagram needs an introductory sentence conceding that it is subordinate
