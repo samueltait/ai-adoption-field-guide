@@ -33,6 +33,19 @@ Each stop rule in a use case must specify:
 | **Recovery authority** | The role that may authorise resumption after the condition is resolved. This may or may not be the same as the escalation owner. |
 | **Notification duty** | Who else must be told that the stop rule fired: the affected person, a service manager, a regulator, a privacy officer? |
 
+How the seven fields fit together. The table above defines them; the diagram
+shows the order in which they fire.
+
+```mermaid
+flowchart LR
+    T["Trigger<br/>observable condition"] --> D["Detection method<br/>how it is noticed"]
+    D --> I["Immediate action<br/>halt, withhold, queue or suspend"]
+    I --> E["Escalation owner<br/>role with authority to act"]
+    E --> RA["Recovery authority<br/>role that may authorise resumption"]
+    I -.-> EV["Evidence to preserve<br/>recorded at the point of the stop"]
+    E -.-> N["Notification duty<br/>who else must be told"]
+```
+
 ---
 
 ## Stop rule categories

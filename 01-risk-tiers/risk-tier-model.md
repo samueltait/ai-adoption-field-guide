@@ -28,6 +28,20 @@ The model is built on Australia's Guidance for AI Adoption (the six essential pr
 | Per-action gate | Each output is a prepared action on an external system or person. A technical gate holds the action until a named accountable person authorises that specific action. | **Act with approval** |
 | No exercisable mechanism | None of the above can be maintained for this use case, or the mechanism that could be maintained is not adequate for the impacts identified. | **Restricted** |
 
+The same test as a sequence. The table above is the source of truth; this
+diagram is a shortcut to it.
+
+```mermaid
+flowchart LR
+    O["AI produces an output"] --> Q1{"Can a competent person see and<br/>change every output before it is used?"}
+    Q1 -->|Yes| A["Per-output review<br/>Tier: Assist"]
+    Q1 -->|No| Q2{"Does a qualified person make and<br/>record each decision the output informs?"}
+    Q2 -->|Yes| B["Per-decision record<br/>Tier: Advise"]
+    Q2 -->|No| Q3{"Does a technical gate hold each prepared action<br/>until a named person authorises that action?"}
+    Q3 -->|Yes| C["Per-action gate<br/>Tier: Act with approval"]
+    Q3 -->|No| D["No exercisable mechanism<br/>Tier: Restricted"]
+```
+
 The tiers are ordered by how far the AI's output travels before a person controls it. The further it travels, the more the organisation has to build to keep control, so practices 3, 4 and 5 scale up across the tiers.
 
 **Practices 1 and 2 are entry gates.** "Decide who is accountable" and "Understand impacts and plan accordingly" decide whether a tier is reachable at all. If the organisation cannot name a person with the authority and competence to exercise the mechanism, or cannot understand and manage the impacts on the people affected, the use case is Restricted regardless of how attractive the mechanism looks.
@@ -43,6 +57,18 @@ The tiers are ordered by how far the AI's output travels before a person control
 ## Entry gates
 
 Both gates must pass before a tier can be assigned. A gate that fails sends the use case to Restricted; the failed gate becomes the re-entry condition.
+
+The two gates in order. Gate 1 and Gate 2 are set out in full below; this
+diagram shows only the sequence and the exits.
+
+```mermaid
+flowchart TD
+    S["Proposed use case"] --> G1{"Gate 1: Decide who is accountable.<br/>Can a role with the authority, competence and<br/>availability to exercise the control be named?"}
+    G1 -->|No| R["Restricted.<br/>The failed gate is the re-entry condition."]
+    G1 -->|Yes| G2{"Gate 2: Understand impacts and plan accordingly.<br/>Are affected people identified, with a feedback and<br/>redress route that exists before deployment?"}
+    G2 -->|No| R
+    G2 -->|Yes| T["Assign a tier by the control mechanism<br/>that can actually be exercised"]
+```
 
 ### Gate 1: Decide who is accountable
 
