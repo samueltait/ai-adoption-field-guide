@@ -13,6 +13,8 @@ Work through these questions before deploying an AI-assisted workflow. The answe
 
 The output is a single assessment record for the use case.
 
+**What "decision rights" means here.** In this bank the phrase covers the whole allocation of authority over an AI-assisted workflow: who is accountable, who approves, who operates, who monitors, and who can stop the capability. Some task-allocation frameworks use it more narrowly, for final authority alone, alongside initiative and control as separately allocated elements (see [GLOSSARY.md](../GLOSSARY.md) and [REFERENCES.md](../REFERENCES.md) entry [10]). If your organisation uses the narrower sense, record which sense you mean in the assessment record so the two are not conflated.
+
 ---
 
 ## How to use this bank

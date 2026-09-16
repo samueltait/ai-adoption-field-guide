@@ -1,0 +1,56 @@
+name: Report an error or unclear passage
+description: Something in the guide is wrong, out of date, or cannot be followed.
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are welcome. The more precisely you quote the passage, the
+        faster it can be fixed.
+
+  - type: input
+    id: location
+    attributes:
+      label: File and section
+      description: For example, 01-risk-tiers/risk-tier-model.md, "Entry gates".
+      placeholder: path/to/file.md, section heading
+    validations:
+      required: true
+
+  - type: textarea
+    id: passage
+    attributes:
+      label: The passage as it currently reads
+      description: Quote it exactly, so the change can be located and checked.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or unclear
+      description: >-
+        Say whether this is a factual error, an internal contradiction, a
+        citation problem, or a passage that cannot be acted on as written.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Primary source, if you have one
+      description: >-
+        Title, publisher, date and URL. Claims drawn from consulting reports,
+        analyst notes or news articles are not used in this guide.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confirmation
+      options:
+        - label: >-
+            This report contains no client material, real organisation detail,
+            or anything traceable to a real engagement.
+          required: true

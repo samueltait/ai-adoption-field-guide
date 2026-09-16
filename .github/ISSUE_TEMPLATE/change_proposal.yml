@@ -1,0 +1,66 @@
+name: Propose a change or addition
+description: Suggest new material, a restructure, or a change of scope.
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open an issue before a pull request. Changes are reviewed for fit with
+        the guide's scope and structure rather than merged automatically.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: One or two sentences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: What a reader could do afterwards that they cannot do now
+      description: >-
+        Every substantive section must produce something usable: a tier, a
+        named role, a stop rule, a measure.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New section or subsection
+        - Change to the tier model
+        - New or changed stop-rule category
+        - New or changed oversight pattern
+        - New worked example
+        - Restructure or navigation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: attribution
+    attributes:
+      label: Origin of the idea
+      description: >-
+        If this comes from a published framework, name the author and work so
+        it can be attributed in REFERENCES.md. If it is your own, say so.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Confirmation
+      options:
+        - label: >-
+            This contains no client material or real organisation detail, and
+            any worked example proposed is fictional.
+          required: true
+        - label: >-
+            This does not reproduce text from Australia's Guidance for AI
+            Adoption, the NIST AI RMF, or another referenced work.
+          required: true

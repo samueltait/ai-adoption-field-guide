@@ -17,7 +17,7 @@ Corrections, questions and suggestions are welcome. This is a governance referen
 - Statistics from consulting reports, analyst notes or news articles without a primary source.
 - Text copied from Australia's Guidance for AI Adoption, the NIST AI RMF or any other referenced work. Link to them; do not reproduce them.
 - Changes that turn the guide into legal advice, a certification scheme or a compliance checklist for a specific law.
-- Code, GitHub Actions, badges, widgets or binary files. The guide is plain Markdown so that it can be read and edited anywhere.
+- Code, GitHub Actions, badges, widgets or binary files. The guide is plain Markdown so that it can be read and edited anywhere. The only permitted exception is repository metadata that carries no executable content: `CITATION.cff`, and the issue and pull request templates under `.github/`. There are no workflows, no dependency automation and no build step, and none will be accepted.
 
 ## Style
 

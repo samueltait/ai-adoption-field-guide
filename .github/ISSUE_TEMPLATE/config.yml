@@ -1,0 +1,13 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to contribute
+    url: https://github.com/samueltait/ai-adoption-field-guide/blob/main/CONTRIBUTING.md
+    about: What the guide accepts, what it does not, and the style rules.
+  - name: Repository rules
+    url: https://github.com/samueltait/ai-adoption-field-guide/blob/main/AGENTS.md
+    about: Source of truth, confidentiality limits, style and diagram rules.
+  - name: Limitations
+    url: https://github.com/samueltait/ai-adoption-field-guide/blob/main/LIMITATIONS.md
+    about: >-
+      Read before reporting that the guide does not cover something. It is not
+      legal advice, certification, or a compliance determination.

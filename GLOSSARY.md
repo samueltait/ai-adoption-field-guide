@@ -65,6 +65,13 @@ The allocation of authority to make, approve, override, escalate, and retire
 decisions in an AI-assisted workflow: who is accountable, who approves, who
 operates, who monitors, and who can stop the capability.
 
+Some task-allocation frameworks use the same phrase in a narrower sense, for
+final authority alone, as one of three elements allocated separately alongside
+initiative (who starts the work) and control (who oversees execution). See
+Afroogh, Varshney and D'Cruz (2025) in REFERENCES.md [10]. This guide uses the
+broad sense throughout. Where an assessment draws on both, record which sense
+is meant.
+
 **Entry gate**
 One of the two conditions, drawn from Australia's Guidance for AI Adoption
 practices 1 ("Decide who is accountable") and 2 ("Understand impacts and

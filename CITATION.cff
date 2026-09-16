@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: AI Adoption Field Guide
+message: >-
+  If you use or adapt this guide, please cite it using the metadata below.
+type: dataset
+authors:
+  - family-names: Tait
+    given-names: Samuel
+abstract: >-
+  A practical, open guide to assigning proportionate human control to
+  AI-assisted workflows. It sets out a four-tier model organised on Australia's
+  Guidance for AI Adoption practice 6, "Maintain human control", with practices
+  1 and 2 as entry gates, a decision-rights question bank, eight oversight
+  patterns, thirteen stop-rule categories including a first-class "no
+  comparable case" state, adoption and benefits-realisation measures, three
+  fictional worked examples, and one illustration drawn from a real documented
+  incident. Mapped to the NIST AI Risk Management Framework. Not legal advice
+  or certification.
+keywords:
+  - ai-governance
+  - ai-adoption
+  - risk-management
+  - decision-rights
+  - human-in-the-loop
+  - ai-policy
+  - australia
+  - nist-ai-rmf
+  - enterprise-ai
+  - responsible-ai
+license: CC-BY-4.0
+repository-code: https://github.com/samueltait/ai-adoption-field-guide
+url: https://github.com/samueltait/ai-adoption-field-guide
+version: 2026-09-16
+date-released: 2026-09-16

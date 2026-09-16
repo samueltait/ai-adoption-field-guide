@@ -28,18 +28,22 @@ The model is built on Australia's Guidance for AI Adoption (the six essential pr
 | Per-action gate | Each output is a prepared action on an external system or person. A technical gate holds the action until a named accountable person authorises that specific action. | **Act with approval** |
 | No exercisable mechanism | None of the above can be maintained for this use case, or the mechanism that could be maintained is not adequate for the impacts identified. | **Restricted** |
 
-The same test as a sequence. The table above is the source of truth; this
-diagram is a shortcut to it.
+How a tier is selected. Where the output meets the world determines which
+mechanism is required. The entry gates and the adequacy test then decide
+whether that tier is reachable. A failure at either sends the use case to
+Restricted; it does not move it to a tier with a weaker control.
 
 ```mermaid
-flowchart LR
-    O["AI produces an output"] --> Q1{"Can a competent person see and<br/>change every output before it is used?"}
-    Q1 -->|Yes| A["Per-output review<br/>Tier: Assist"]
-    Q1 -->|No| Q2{"Does a qualified person make and<br/>record each decision the output informs?"}
-    Q2 -->|Yes| B["Per-decision record<br/>Tier: Advise"]
-    Q2 -->|No| Q3{"Does a technical gate hold each prepared action<br/>until a named person authorises that action?"}
-    Q3 -->|Yes| C["Per-action gate<br/>Tier: Act with approval"]
-    Q3 -->|No| D["No exercisable mechanism<br/>Tier: Restricted"]
+flowchart TD
+    S["Proposed use case"] --> W["Where does the output<br/>meet the world?"]
+    W -- "Stays in the user's own work" --> M1["Per-output review<br/>Assist"]
+    W -- "Informs a decision about someone else" --> M2["Per-decision record<br/>Advise"]
+    W -- "Prepares an action on an external system" --> M3["Per-action gate<br/>Act with approval"]
+    M1 --> G["Gates 1 and 2 pass, and mechanism<br/>adequate for the impacts?"]
+    M2 --> G
+    M3 --> G
+    G -- Yes --> T["Tier assigned"]
+    G -- No --> R["Restricted,<br/>not a lower tier"]
 ```
 
 The tiers are ordered by how far the AI's output travels before a person controls it. The further it travels, the more the organisation has to build to keep control, so practices 3, 4 and 5 scale up across the tiers.
@@ -57,18 +61,6 @@ The tiers are ordered by how far the AI's output travels before a person control
 ## Entry gates
 
 Both gates must pass before a tier can be assigned. A gate that fails sends the use case to Restricted; the failed gate becomes the re-entry condition.
-
-The two gates in order. Gate 1 and Gate 2 are set out in full below; this
-diagram shows only the sequence and the exits.
-
-```mermaid
-flowchart TD
-    S["Proposed use case"] --> G1{"Gate 1: Decide who is accountable.<br/>Can a role with the authority, competence and<br/>availability to exercise the control be named?"}
-    G1 -->|No| R["Restricted.<br/>The failed gate is the re-entry condition."]
-    G1 -->|Yes| G2{"Gate 2: Understand impacts and plan accordingly.<br/>Are affected people identified, with a feedback and<br/>redress route that exists before deployment?"}
-    G2 -->|No| R
-    G2 -->|Yes| T["Assign a tier by the control mechanism<br/>that can actually be exercised"]
-```
 
 ### Gate 1: Decide who is accountable
 
@@ -363,6 +355,8 @@ The following conditions require escalation to a named accountable person, whate
 The tiered approach in this guide builds on **Paweł Huryn, "The Intent Engineering Framework for AI Agents,"** *Product Compass*, 13 January 2026. Huryn's framework sets out a hierarchy of decision types and autonomy levels for AI agents, ordered by blast radius and reversibility, and introduces stop rules and health metrics as governance concepts. The idea of grading AI decision authority in tiers comes from that work.
 
 What this guide adds is the Australian regulatory grounding (Australia's Guidance for AI Adoption and its six essential practices), the use of practice 6 as the organising axis and practices 1 and 2 as entry gates, the mapping of every practice and NIST AI RMF function to each tier, the decision-rights question bank, the oversight patterns, the stop-rule categories and the worked examples. Huryn's level names and his seven-part specification are not used here.
+
+**Task-level allocation is a different unit of analysis.** Saleh Afroogh, Kush R. Varshney and Jason D'Cruz classify a single task by risk and complexity, map it to an autonomous, assistive or adversarial AI role, and allocate initiative, control and decision rights as three separate questions (arXiv:2505.18422, 2025; see [REFERENCES.md](../REFERENCES.md) entry [10]). That is a useful discipline for deciding how work is split inside a workflow, and it is not what this model does. This model assesses a use case rather than a task, takes where the output meets the world as the classifier rather than risk, and treats consequence, reach and reversibility as inputs to the adequacy test rather than as the axis. The two are compatible in practice: a task-level allocation describes how the work divides, while the tier states what the organisation must be able to do about the workflow as a whole, and what happens when it cannot. Neither the risk by complexity matrix nor the agency triad is reproduced or adapted here.
 
 **Australia's Guidance for AI Adoption** (National AI Centre, October 2025; implementation guidance May 2026): https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-implementation-guidance
 

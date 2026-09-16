@@ -222,6 +222,35 @@ incident."**
 
 ---
 
+## Cited to mark a boundary, not adapted
+
+**[10] Afroogh, S., Varshney, K. R., & D'Cruz, J. (2025). "A Task-Driven
+Human-AI Collaboration: When to Automate, When to Collaborate, When to
+Challenge."**
+- Authors: Saleh Afroogh, Kush R. Varshney, Jason D'Cruz
+- Publisher: arXiv preprint, arXiv:2505.18422 [cs.CY]. Version 6 at the time
+  of access.
+- Date: first posted 23 May 2025. Identifier, title and author names verified
+  against export.arxiv.org on 16 September 2026.
+- URL: https://arxiv.org/abs/2505.18422
+- Access date: 16 September 2026
+- Role in this guide: cited in `01-risk-tiers/risk-tier-model.md` under
+  "Related work", and in `GLOSSARY.md` and
+  `02-decision-rights/question-bank.md` to disambiguate the term "decision
+  rights". The paper classifies a single task by risk and complexity, maps it
+  to an autonomous, assistive or adversarial AI role, and allocates
+  initiative, control and decision rights as three separate questions. This
+  guide works at a different unit (the use case, not the task) and on a
+  different primary axis (where the output meets the world, not risk by
+  complexity), and treats consequence, reach and reversibility as inputs to
+  the adequacy test rather than as the classifier.
+- Not adapted: the risk by complexity matrix, the three AI roles and the
+  agency triad are the authors' framework. Nothing from the paper is
+  reproduced or adapted in this guide. It is cited so that a reader who knows
+  that framework can see where the two differ and why.
+
+---
+
 ## Source register notes
 
 - This register covers the primary sources drawn on in drafting this guide.

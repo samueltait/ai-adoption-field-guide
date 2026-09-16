@@ -71,10 +71,15 @@ ai-adoption-field-guide/
 ├── QUICKSTART.md                                  ← Five-step deployment checklist
 ├── CHANGELOG.md                                   ← Version history
 ├── CONTRIBUTING.md                                ← How to report errors and propose changes
-├── LICENSE                                        ← CC BY 4.0
+├── AGENTS.md                                      ← Repository rules for contributors and agents
+├── CODE_OF_CONDUCT.md                             ← Conduct in issues and pull requests
+├── LICENSE                                        ← CC BY 4.0, unmodified legal code
+├── THIRD_PARTY_NOTICES.md                         ← Referenced and adapted work, and its rights
+├── CITATION.cff                                   ← Citation metadata
 ├── GLOSSARY.md                                    ← Key terms
 ├── LIMITATIONS.md                                 ← Scope and caveats
 ├── REFERENCES.md                                  ← Source register
+├── .github/                                       ← Issue and pull request templates only
 ├── 01-risk-tiers/
 │   └── risk-tier-model.md                         ← Entry gates, four tiers, mapping table
 ├── 02-decision-rights/

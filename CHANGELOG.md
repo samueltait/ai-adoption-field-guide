@@ -8,6 +8,61 @@ versioning because it is a governance reference document, not software.
 
 ---
 
+## 2026-09-16 (revision 2): Licence, repository standards, diagrams
+
+**Licence**
+
+- `LICENSE` now contains the unmodified CC BY 4.0 legal code. The previous
+  file paraphrased the licence and appended third-party terms to it, so
+  automated licence detection could not match it and the repository was
+  reported as `NOASSERTION`.
+- `THIRD_PARTY_NOTICES.md` added. The referenced and adapted work previously
+  appended to `LICENSE` is recorded there instead.
+
+**Repository standards**
+
+- `AGENTS.md` added: source of truth, confidentiality limits, style rules,
+  and the test a diagram must pass to be included.
+- `CODE_OF_CONDUCT.md` added. Original text written for this repository. It
+  is not the Contributor Covenant and should not be cited as it.
+- `CITATION.cff` added, so the guide can be cited directly from GitHub.
+- `.github/` added with two issue templates and a pull request template.
+  These carry no executable content. `CONTRIBUTING.md` now states this
+  metadata exception explicitly and records that no workflows, dependency
+  automation or build step will be accepted.
+
+**Diagrams**
+
+- `01-risk-tiers/risk-tier-model.md`: the tier selection diagram was
+  replaced. The previous version asked which control mechanism the
+  organisation could exercise and, at each failure, moved to a tier with a
+  weaker control. That contradicts this guide's own rule that where an
+  organisation cannot provide what a mechanism requires the answer is
+  Restricted, not a lower standard. The replacement takes where the output
+  meets the world as the classifier, consistent with the tier factors, and
+  routes any gate or adequacy failure to Restricted.
+- `01-risk-tiers/risk-tier-model.md`: the entry gate diagram was removed. It
+  used a full screen of vertical space to restate a relationship the adjacent
+  sentence already states.
+- `04-stop-rules/stop-rules.md`: the stop rule diagram was removed and its
+  introduction rewritten. The diagram presented the seven fields as a firing
+  sequence, implied that the recovery authority is necessarily a later step
+  than the escalation owner, and implied that evidence preservation and
+  notification wait on escalation. The seven fields are a specification, not
+  a sequence.
+
+**References**
+
+- `REFERENCES.md` entry [10] added: Afroogh, Varshney and D'Cruz (2025),
+  arXiv:2505.18422, cited to mark the boundary between task-level allocation
+  and use-case-level tiering. Nothing from it is adapted. Identifier, title
+  and author names verified against export.arxiv.org on 16 September 2026.
+- `GLOSSARY.md` and `02-decision-rights/question-bank.md`: the term "decision
+  rights" is now distinguished from the narrower sense used in
+  task-allocation frameworks.
+
+---
+
 ## 2026-09-16: Initial release
 
 **Included at initial release:**
