@@ -61,6 +61,20 @@ Most organisations start AI governance with a list of rules: do this, never do t
 
 **For a real case:** [07-incident-illustration/exploitgym-2026.md](07-incident-illustration/exploitgym-2026.md) reads a real, documented incident through the guide. It is an illustration, not the basis of the model, and it states its research-context limits up front.
 
+How the sections fit together for a new use case. Sections 01 to 05 run in order, and the loop closes when a material change sends the use case back for reassessment. The worked examples (06) and the incident illustration (07) are reference, not steps, so they do not appear below.
+
+```mermaid
+flowchart TD
+    U["Proposed use case"] --> T["01 Risk tiers<br/>entry gates, required mechanism"]
+    T -- "gate or adequacy fails" --> R["Restricted<br/>no use until reassessed"]
+    T -- "tier reachable" --> Q["02 Decision rights<br/>provisional tier, named owners"]
+    Q --> O["03 Oversight patterns<br/>how the control is run"]
+    O --> S["04 Stop rules<br/>what halts work, who takes it"]
+    S --> M["05 Adoption measures<br/>baselined before deployment"]
+    M --> D["Operate, monitor, reassess"]
+    D -- "material change" --> T
+```
+
 ---
 
 ## Guide structure
