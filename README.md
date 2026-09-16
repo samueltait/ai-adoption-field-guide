@@ -68,9 +68,9 @@ flowchart TD
     U["Proposed use case"] --> T["01 Risk tiers<br/>entry gates, required mechanism"]
     T -- "gate or adequacy fails" --> R["Restricted<br/>no use until reassessed"]
     T -- "tier reachable" --> Q["02 Decision rights<br/>provisional tier, named owners"]
-    Q --> O["03 Oversight patterns<br/>how the control is run"]
-    O --> S["04 Stop rules<br/>what halts work, who takes it"]
-    S --> M["05 Adoption measures<br/>baselined before deployment"]
+    Q --> O["03 Oversight patterns"]
+    O --> S["04 Stop rules"]
+    S --> M["05 Adoption measures"]
     M --> D["Operate, monitor, reassess"]
     D -- "material change" --> T
 ```
