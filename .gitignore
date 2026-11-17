@@ -1,0 +1,4 @@
+# Local environment and OS files
+.env*
+!.env.example
+.DS_Store
